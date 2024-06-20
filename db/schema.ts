@@ -11,6 +11,8 @@ import {
 
 import { MAX_HEARTS } from "@/constants";
 
+const userId = "user_2V7JJKmoA9HqzHhfMqK5cpgLl56";
+
 export const courses = pgTable("courses", {
   id: serial("id").primaryKey(),
   title: text("title").notNull(),
