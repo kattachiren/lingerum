@@ -1,6 +1,5 @@
 import type { PropsWithChildren } from "react";
 
-import { Footer } from "./footer";
 import { Header } from "./header";
 
 const MarketingLayout = ({ children }: PropsWithChildren) => {

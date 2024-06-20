@@ -14,8 +14,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export const Header = () => {
-  const { userId } = auth();
-
   return (
     <header className="h-20 w-full border-b-2 border-slate-200 px-4">
       <div className="mx-auto flex h-full items-center justify-between lg:max-w-screen-lg">

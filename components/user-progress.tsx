@@ -13,7 +13,6 @@ type UserProgressProps = {
 };
 
 export const UserProgress = ({
-  activeCourse,
   hearts,
   points,
   hasActiveSubscription,

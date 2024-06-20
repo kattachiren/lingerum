@@ -1,38 +1,24 @@
+import Image from "next/image";
 import { redirect } from "next/navigation";
 
-import { FeedWrapper } from "@/components/feed-wrapper";
 import { Promo } from "@/components/promo";
 import { Quests } from "@/components/quests";
 import { StickyWrapper } from "@/components/sticky-wrapper";
 import { UserProgress } from "@/components/user-progress";
 import {
   getCourseProgress,
-  getLessonPercentage,
-  getUnits,
   getUserProgress,
   getUserSubscription,
 } from "@/db/queries";
 
-import Image from "next/image";
-
 const TheoryPage = async () => {
   const userProgressData = getUserProgress();
   const courseProgressData = getCourseProgress();
-  const lessonPercentageData = getLessonPercentage();
-  const unitsData = getUnits();
   const userSubscriptionData = getUserSubscription();
 
-  const [
-    userProgress,
-    units,
-    courseProgress,
-    lessonPercentage,
-    userSubscription,
-  ] = await Promise.all([
+  const [userProgress, courseProgress, userSubscription] = await Promise.all([
     userProgressData,
-    unitsData,
     courseProgressData,
-    lessonPercentageData,
     userSubscriptionData,
   ]);
   if (!courseProgress || !userProgress || !userProgress.activeCourse)

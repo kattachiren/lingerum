@@ -1,22 +1,6 @@
 import { NotebookText } from "lucide-react";
-import Link from "next/link";
-import { lessons, units } from "@/db/schema";
 
-type UnitProps = {
-  id: number;
-  order: number;
-  title: string;
-  description: string;
-  lessons: (typeof lessons.$inferSelect & {
-    completed: boolean;
-  })[];
-  activeLesson:
-    | (typeof lessons.$inferSelect & {
-        unit: typeof units.$inferSelect;
-      })
-    | undefined;
-  activeLessonPercentage: number;
-};
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 type UnitBannerProps = {
