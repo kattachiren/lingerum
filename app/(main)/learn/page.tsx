@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import Link from "next/link";
 
 import { FeedWrapper } from "@/components/feed-wrapper";
 import { Promo } from "@/components/promo";
@@ -51,9 +52,16 @@ const LearnPage = async () => {
           points={userProgress.points}
           hasActiveSubscription={isPro}
         />
-
         {!isPro && <Promo />}
         <Quests points={userProgress.points} />
+        <div className="ml-[20px] flex w-[340px] flex-row ">
+          <Link href="/aboutUs" className="ml-[70px] mr-[70px]">
+            <p>О нас</p>
+          </Link>
+          <Link href="/reference">
+            <p>Справка</p>
+          </Link>
+        </div>
       </StickyWrapper>
       <FeedWrapper>
         <Header title={userProgress.activeCourse.title} />

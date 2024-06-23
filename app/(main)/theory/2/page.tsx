@@ -10,6 +10,7 @@ import {
   getUserProgress,
   getUserSubscription,
 } from "@/db/queries";
+import Link from "next/link";
 
 const TheoryPage = async () => {
   const userProgressData = getUserProgress();
@@ -25,6 +26,7 @@ const TheoryPage = async () => {
     redirect("/courses");
 
   const isPro = !!userSubscription?.isActive;
+
   return (
     <div className="absolute flex flex-row-reverse gap-[48px] px-6">
       <StickyWrapper>
@@ -37,6 +39,14 @@ const TheoryPage = async () => {
 
         {!isPro && <Promo />}
         <Quests points={userProgress.points} />
+        <div className="ml-[20px] flex w-[340px] flex-row ">
+          <Link href="/aboutUs" className="ml-[70px] mr-[70px]">
+            <p>О нас</p>
+          </Link>
+          <Link href="/reference">
+            <p>Справка</p>
+          </Link>
+        </div>
       </StickyWrapper>
       <div>
         <h1 className="mb-3 mt-3 text-2xl font-extrabold tracking-wide text-purple-600">

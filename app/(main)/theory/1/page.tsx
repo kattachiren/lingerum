@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { redirect } from "next/navigation";
+import Link from "next/link";
 
 import { Promo } from "@/components/promo";
 import { Quests } from "@/components/quests";
@@ -37,6 +38,14 @@ const TheoryPage = async () => {
 
         {!isPro && <Promo />}
         <Quests points={userProgress.points} />
+        <div className="ml-[20px] flex w-[340px] flex-row ">
+          <Link href="/aboutUs" className="ml-[70px] mr-[70px]">
+            <p>О нас</p>
+          </Link>
+          <Link href="/reference">
+            <p>Справка</p>
+          </Link>
+        </div>
       </StickyWrapper>
       <div>
         <h1 className="mb-3 mt-3 text-2xl font-extrabold tracking-wide text-purple-600">

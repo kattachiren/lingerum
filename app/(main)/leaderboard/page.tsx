@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { redirect } from "next/navigation";
+import Link from "next/link";
 
 import { FeedWrapper } from "@/components/feed-wrapper";
 import { Promo } from "@/components/promo";
@@ -40,8 +41,15 @@ const LeaderboardPage = async () => {
         />
         {!isPro && <Promo />}
         <Quests points={userProgress.points} />
+        <div className="ml-[20px] flex w-[340px] flex-row ">
+          <Link href="/aboutUs" className="ml-[70px] mr-[70px]">
+            <p>О нас</p>
+          </Link>
+          <Link href="/reference">
+            <p>Справка</p>
+          </Link>
+        </div>
       </StickyWrapper>
-
       <FeedWrapper>
         <div className="flex w-full flex-col items-center">
           <Image
