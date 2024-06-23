@@ -25,7 +25,7 @@ export const HeartsModal = () => {
 
   const onClick = () => {
     close();
-    router.push("/store");
+    router.push("/shop");
   };
 
   if (!isClient) return null;
@@ -48,7 +48,7 @@ export const HeartsModal = () => {
           </DialogTitle>
 
           <DialogDescription className="text-center text-base">
-            Get Pro for unlimited hearts, or purchase them in the store.
+            Get Pro for unlimited hearts, or purchase them in the shop.
           </DialogDescription>
         </DialogHeader>
 
