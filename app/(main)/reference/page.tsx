@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 
 const ReferencePage = () => {
   return (
@@ -9,7 +8,7 @@ const ReferencePage = () => {
       </h1>
       <div className="hidden h-2 w-full border-t-2 border-slate-200 p-2 lg:block"></div>
       <div className="w-[950px] text-xl">
-        Добро пожаловать в наш раздел "Справка". Здесь вы найдете ответы на
+        Добро пожаловать в наш раздел «Справка». Здесь вы найдете ответы на
         часто задаваемые вопросы и полезные советы по использованию нашего
         приложения.
       </div>
@@ -47,7 +46,7 @@ const ReferencePage = () => {
         4. Что делать, если я забыл пароль?
       </h2>
       <div className="w-[950px] text-xl">
-        • Перейдите на страницу входа и нажмите "Забыли пароль?".<br></br>
+        • Перейдите на страницу входа и нажмите «Забыли пароль?».<br></br>
         <br></br>• Следуйте инструкциям для восстановления пароля.
       </div>
       <br></br>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { Promo } from "@/components/promo";
@@ -10,7 +11,6 @@ import {
   getUserProgress,
   getUserSubscription,
 } from "@/db/queries";
-import Link from "next/link";
 
 const TheoryPage = async () => {
   const userProgressData = getUserProgress();

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { redirect } from "next/navigation";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 import { Promo } from "@/components/promo";
 import { Quests } from "@/components/quests";
